@@ -37,27 +37,28 @@ class File_Interact():
     wb.save(self.file_path)
 
 
-if __name__ == '__main__':
-  file_interact = File_Interact(
-      file_path='res.xlsx'
-  )
-  file1 = File_Interact(
-    file_path='file1.txt'
-  )
-  file2 = File_Interact(
-    file_path='file2.txt'
-  )
-  sheet_name = 'Sheet1'
-  cell_name = 'A3'
-  content = 'hihi'
-  file_interact.update_cell(sheet_name, 'A1', 'Tên')
-  file_interact.update_cell(sheet_name, 'B1', 'Tuổi')
-  L1 = file1.read_file_list()
-  L2 = file2.read_file_list()
+# Testing purpose
+# if __name__ == '__main__':
+#   file_interact = File_Interact(
+#       file_path='res.xlsx'
+#   )
+#   file1 = File_Interact(
+#     file_path='file1.txt'
+#   )
+#   file2 = File_Interact(
+#     file_path='file2.txt'
+#   )
+#   sheet_name = 'Sheet1'
+#   cell_name = 'A3'
+#   content = 'hihi'
+#   file_interact.update_cell(sheet_name, 'A1', 'Tên')
+#   file_interact.update_cell(sheet_name, 'B1', 'Tuổi')
+#   L1 = file1.read_file_list()
+#   L2 = file2.read_file_list()
 
-  for i in range(0, len(L1)):
-    cell_name = 'A%s'%(i+2)
-    cell_age = 'B%s'%(i+2)
-    file_interact.update_cell(sheet_name, cell_name, L1[i])
-    file_interact.update_cell(sheet_name, cell_age, L2[i])
-  print('done')
+#   for i in range(0, len(L1)):
+#     cell_name = 'A%s'%(i+2)
+#     cell_age = 'B%s'%(i+2)
+#     file_interact.update_cell(sheet_name, cell_name, L1[i])
+#     file_interact.update_cell(sheet_name, cell_age, L2[i])
+#   print('done')
